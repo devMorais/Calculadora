@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage">
+
+   
+<Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    
+    
+        <!--PRIMEIRA LINHA -->
+        <Button Text="C" Grid.Row="0" Grid.Column="0" FontSize="50" BackgroundColor="Gray" Clicked="Limpar" />
+        <Label x:Name="lbResultado" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" 
+               FontSize="50" BackgroundColor="Black" TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap"/>
+
+        <!--SEGUNDA LINHA -->
+        <Button Text="√" Grid.Row="1" Grid.Column="0" FontSize="25" TextColor="RED" Clicked="RaizQuadrada" />
+        <Button Text="X²" Grid.Row="1" Grid.Column="1" FontSize="25" TextColor="RED" Clicked="RaizQuadrada"  />
+        <Button Text="%" Grid.Row="1" Grid.Column="2" FontSize="25" TextColor="RED" Clicked="Operador" />
+        <Button Text="DEL" Grid.Row="1" Grid.Column="3" FontSize="25" TextColor="RED" Clicked="LimpaUm" />
+
+        <!--TERCEIRA LINHA -->
+        <Button Text="7" Grid.Row="2" Grid.Column="0" FontSize="25" TextColor="Black" Clicked="LerValor"   />
+        <Button Text="8" Grid.Row="2" Grid.Column="1" FontSize="25" TextColor="Black" Clicked="LerValor"   />
+        <Button Text="9" Grid.Row="2" Grid.Column="2" FontSize="25" TextColor="Black" Clicked="LerValor"   />
+        <Button Text="/" Grid.Row="2" Grid.Column="3" FontSize="25" TextColor="RED"  Clicked="Operador" />
+
+        <!--QUARTA  LINHA -->
+        <Button Text="4" Grid.Row="3" Grid.Column="0" FontSize="25" TextColor="Black" Clicked="LerValor"   />
+        <Button Text="5" Grid.Row="3" Grid.Column="1" FontSize="25" TextColor="Black" Clicked="LerValor"   />
+        <Button Text="6" Grid.Row="3" Grid.Column="2" FontSize="25" TextColor="Black"  Clicked="LerValor"   />
+        <Button Text="*" Grid.Row="3" Grid.Column="3" FontSize="25" TextColor="RED"  Clicked="Operador"  />
+
+        <!--QUINTA  LINHA -->
+        <Button Text="1" Grid.Row="4" Grid.Column="0" FontSize="25" TextColor="Black" Clicked="LerValor"   />
+        <Button Text="2" Grid.Row="4" Grid.Column="1"  FontSize="25" TextColor="Black" Clicked="LerValor"  />
+        <Button Text="3" Grid.Row="4" Grid.Column="2" FontSize="25" TextColor="Black" Clicked="LerValor"   />
+        <Button Text="-" Grid.Row="4" Grid.Column="3" FontSize="25" TextColor="RED" Clicked="Operador"  />
+
+        <!--SEXTA  LINHA -->
+        <Button Text="." Grid.Row="5" Grid.Column="0" FontSize="25" TextColor="Black" Clicked="Virgula"   />
+        <Button Text="0" Grid.Row="5" Grid.Column="1" FontSize="25" TextColor="Black" Clicked="LerValor"  />
+        <Button Text="=" Grid.Row="5" Grid.Column="2" FontSize="25" TextColor="Black" Background="red" Clicked="Calcular" />
+        <Button Text="+" Grid.Row="5" Grid.Column="3" FontSize="25" TextColor="RED" Clicked="Operador" />
+
+
+    </Grid>
+
+</ContentPage>
